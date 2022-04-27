@@ -10,7 +10,7 @@ namespace MyGame
 
         public Enemy(string name)
         {
-            this.name = name;
+            SetName(name);
             health = 100;
             shield = 0;
         }
@@ -39,7 +39,12 @@ namespace MyGame
 
         public float GetShield() => shield;
 
-        
-        
+
+        public string SetName(string theName)
+        {
+            theName = theName.Trim();
+            name = theName;
+            return name;
+        } 
     }
 }
