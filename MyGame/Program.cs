@@ -32,6 +32,9 @@ namespace MyGame
                 Enemy enemyInstance = new Enemy(enemyName);
                 //Iguala o conteúdo do elemento respetivo do array enemiesArray com a instância criada
                 enemiesArray[arrayID] = enemyInstance;
+
+                enemyInstance.PickUpPowerUp(PowerUp.Health, 50);
+                enemyInstance.PickUpPowerUp(PowerUp.Shield,20);
                 //E por fim acrescenta 1 ao ID do array para depois o passo acima igual para o elemento do arrau enemiesArray seguinte
                 arrayID++;
             }
@@ -40,9 +43,10 @@ namespace MyGame
             for (int j = 0; j < enemiesArray.Length; j++)
             {
                 
-                //Faz print ao nome  do respetivo elemento do array
+                //Faz print do nome, vida e shield  do respetivo elemento do array
                 Console.WriteLine($"{enemiesArray[j].GetName()}");
-
+                Console.WriteLine($"Has {enemiesArray[j].GetHealth()} of Health");
+                Console.WriteLine($"Has {enemiesArray[j].GetShield()} of Shield");
             }
             
         }
