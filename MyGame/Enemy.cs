@@ -45,6 +45,26 @@ namespace MyGame
             theName = theName.Trim();
             name = theName;
             return name;
+        }
+
+        public void PickUpPowerUp(PowerUp powerUp, float amount)
+        {
+            if(powerUp == PowerUp.Health)
+            {
+                health += amount;
+                if(health >= 100)
+                {
+                    health = 100;
+                }
+            }
+            else if(powerUp == PowerUp.Shield)
+            {
+                shield += amount;
+                if(shield >= 100)
+                {
+                    shield = 100;
+                }
+            }
         } 
     }
 }
