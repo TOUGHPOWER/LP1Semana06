@@ -34,5 +34,12 @@ namespace MyGame
                 }
             }
         }
+
+        public float GetHealth() => health;
+
+        public float GetShield() => shield;
+
+        
+        
     }
 }
