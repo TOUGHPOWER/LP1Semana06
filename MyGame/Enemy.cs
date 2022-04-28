@@ -8,6 +8,10 @@ namespace MyGame
         private float health;
         private float shield;
 
+        static int powerUpsPickedUp;
+
+
+
         public Enemy(string name)
         {
             SetName(name);
@@ -15,6 +19,12 @@ namespace MyGame
             shield = 0;
         }
 
+        static Enemy()
+        {
+            powerUpsPickedUp = 0;
+        }
+
+        static int GetNumberOfPowerUpsPickedUp() => powerUpsPickedUp;
         public string GetName() 
         {
             return name;
@@ -65,6 +75,8 @@ namespace MyGame
                     shield = 100;
                 }
             }
+
+            powerUpsPickedUp++;
         } 
     }
 }
