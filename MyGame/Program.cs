@@ -9,7 +9,7 @@ namespace MyGame
             Console.Write("How many Enemies you want: ");
             int numberOfEnemies = int.Parse(Console.ReadLine());
             EnemyCreator(numberOfEnemies);
-            
+            Console.WriteLine("Thank you for using this program!");
             
         }
         /// <summary>
