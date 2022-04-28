@@ -10,6 +10,7 @@ namespace MyGame
             int numberOfEnemies = int.Parse(Console.ReadLine());
             EnemyCreator(numberOfEnemies);
             
+            
         }
         /// <summary>
         /// Creates Enemies and respective names per Enemy Number 
@@ -35,6 +36,7 @@ namespace MyGame
 
                 enemyInstance.PickUpPowerUp(PowerUp.Health, 50);
                 enemyInstance.PickUpPowerUp(PowerUp.Shield,20);
+                
                 //E por fim acrescenta 1 ao ID do array para depois o passo acima igual para o elemento do arrau enemiesArray seguinte
                 arrayID++;
             }
@@ -48,6 +50,7 @@ namespace MyGame
                 Console.WriteLine($"Has {enemiesArray[j].GetHealth()} of Health");
                 Console.WriteLine($"Has {enemiesArray[j].GetShield()} of Shield");
             }
+            
             
         }
     }
